@@ -12,8 +12,5 @@ class User < ApplicationRecord
   
   after_create :send_welcome_mail
   
-  def send_welcome_mail
-    ThanksMailer.send_signup_email(self).deliver
-  end
   
 end
